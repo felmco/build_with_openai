@@ -544,7 +544,7 @@ def analyze_image_from_url(image_url, question="What's in this image?"):
     print("="*60)
 
     response = client.chat.completions.create(
-        model="gpt-4-vision-preview",
+        model="gpt-4o",
         messages=[
             {
                 "role": "user",
@@ -575,7 +575,7 @@ def analyze_local_image(image_path, question="What's in this image?"):
     base64_image = encode_image(image_path)
 
     response = client.chat.completions.create(
-        model="gpt-4-vision-preview",
+        model="gpt-4o",
         messages=[
             {
                 "role": "user",
@@ -613,7 +613,7 @@ def multiple_images_analysis(image_urls, question):
         })
 
     response = client.chat.completions.create(
-        model="gpt-4-vision-preview",
+        model="gpt-4o",
         messages=[{"role": "user", "content": content}],
         max_tokens=500
     )
@@ -990,6 +990,7 @@ if __name__ == "__main__":
 ## 5. Structured Outputs
 
 ### 5.1 JSON Mode and Structured Outputs
+**New**: Structured Outputs now support **Context-Free Grammars (CFG)** for enforcing strict non-JSON formats (e.g., SQL, Python ASTs) and ensuring 100% schema compliance.
 
 ```python
 """
@@ -1163,6 +1164,7 @@ if __name__ == "__main__":
 ## 6. Function Calling
 
 ### 6.1 Basic Function Calling
+**Update**: Functions can now return free-form text payloads (like raw code) not just JSON, enabling more flexible agentic workflows.
 
 ```python
 """

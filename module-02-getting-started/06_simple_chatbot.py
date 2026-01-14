@@ -40,7 +40,7 @@ class SimpleChatbot:
         try:
             # Get response from OpenAI
             response = client.chat.completions.create(
-                model="gpt-3.5-turbo",
+                model="gpt-5-mini",
                 messages=self.messages,
                 temperature=0.7
             )

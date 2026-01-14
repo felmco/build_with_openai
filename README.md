@@ -101,7 +101,21 @@ Explore the full range of OpenAI platform capabilities including responses, webh
 
 ---
 
-### [Module 6: Specialized Features](./module-06-specialized-features/README.md)
+### [Module 6: Agents SDK](./module-06-agents-sdk/README.md)
+**Duration**: 3 hours | **Level**: Advanced
+
+**New for 2026**: Master the Agents SDK to build autonomous, multi-agent systems with safety guardrails and complex handoff patterns.
+
+**Topics Covered**:
+- Agents SDK Architecture
+- Building Single Agents
+- Multi-Agent Orchestration (Handoffs)
+- Safety & Guardrails
+- Common Agent Patterns (Orchestrator, Evaluator)
+
+---
+
+### [Module 7: Specialized Features](./module-06-specialized-features/README.md)
 **Duration**: 5 hours | **Level**: Intermediate to Advanced
 
 Master advanced features including vector stores, real-time APIs, assistants, and chat completions.
@@ -258,6 +272,8 @@ Each module includes:
 ## 🤝 Contributing
 
 This course is continuously updated to reflect the latest OpenAI features and best practices. Contributions are welcome!
+
+**Created by [Future Tales](https://futuretales.ai)**
 
 ---
 

@@ -25,13 +25,11 @@ By the end of this module, you will be able to:
 ## 📖 Table of Contents
 
 1. [What is OpenAI?](#what-is-openai)
-2. [Understanding the OpenAI Platform](#understanding-the-openai-platform)
-3. [Setting Up Your Development Environment](#setting-up-your-development-environment)
-4. [API Key Management](#api-key-management)
-5. [Installing the OpenAI Python SDK](#installing-the-openai-python-sdk)
-6. [Verifying Your Setup](#verifying-your-setup)
-7. [Exercises](#exercises)
-8. [Summary](#summary)
+2. [Setting Up Your Development Environment](#setting-up-your-development-environment)
+3. [API Key Management](#api-key-management)
+4. [Verifying Your Setup](#verifying-your-setup)
+5. [Exercises](#exercises)
+6. [Summary](#summary)
 
 ---
 
@@ -133,9 +131,11 @@ The OpenAI platform consists of several layers:
                  ↓ ↑
 ┌─────────────────────────────────────────┐
 │          AI Models                     │
-│  GPT-5.2, GPT-5 mini, GPT-5 nano, etc. │
+│  GPT-5.2, GPT-5 mini, o1, GPT-4o, etc. │
 └─────────────────────────────────────────┘
 ```
+
+### Key Components
 
 ### Key Components
 
@@ -147,15 +147,16 @@ The platform provides RESTful HTTP endpoints:
 #### 2. **Authentication**
 Secure access via API keys:
 - Organization-level keys
-- Project-specific keys
+- Project-specific keys (Recommended for security)
 - Service account keys
 
 #### 3. **Models**
 Multiple AI models with different capabilities:
-- **GPT-5.2**: Latest and most capable model
-- **GPT-5 mini**: Fast and cost-efficient
-- **GPT-5 nano**: Fastest and most economical
-- **Specialized models**: For images, audio, embeddings
+- **GPT-5.2**: The latest flagship model with superior reasoning and multimodal capabilities.
+- **GPT-5 mini**: High-intelligence, cost-efficient model for most tasks.
+- **GPT-5 nano**: Extremely fast and lightweight for simple tasks.
+- **o1**: Advanced reasoning model for complex problem solving (STEM, coding).
+- **GPT-4o**: Previous generation flagship, still excellent for vision and latency-sensitive tasks.
 
 #### 4. **Rate Limits**
 Controlled access to ensure fair usage:
@@ -168,6 +169,7 @@ Monitor and manage your API usage:
 - Token consumption
 - Cost tracking
 - Request logging
+
 
 ---
 

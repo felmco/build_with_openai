@@ -29,6 +29,7 @@ Explore the full range of OpenAI platform capabilities including embeddings, fin
 4. [Content Moderation](#4-content-moderation)
 5. [File Management](#5-file-management)
 6. [Webhooks](#6-webhooks)
+7. [Agents SDK](#7-agents-sdk)
 
 ---
 
@@ -785,6 +786,48 @@ Best Practices:
 
 print(webhook_guide)
 ```
+
+---
+
+## 7. Agents SDK
+
+### 7.1 Building Autonomous Agents
+**New**: The Agents SDK standardizes how to build stateful, autonomous agents with long-term memory.
+
+```python
+"""
+07_agents_sdk.py - Introduction to OpenAI Agents SDK
+"""
+
+# Pseudo-code for Agents SDK (2026)
+# from openai import Agents
+
+# agent = Agents.create(
+#     name="ResearchAssistant",
+#     model="gpt-5.2",
+#     instructions="You are a helpful researcher.",
+#     memory_type="long_term_notes",  # Persistent memory across sessions
+#     tools=[{"type": "code_interpreter"}, {"type": "file_search"}]
+# )
+
+# # Context Engineering
+# # The SDK allows you to explicitly manage what goes into context
+# agent.memory.add_note("User prefers Python over C++")
+
+# response = agent.run(
+#     message="Analyze the trends in AI from 2025.",
+#     reasoning_effort="high"  # Use advanced reasoning
+# )
+
+# print(response.content)
+```
+
+**Key Features**:
+- **Long-Term Memory Notes**: Agents can read/write persistent notes.
+- **Context Engineering**: Fine-grained control over context window optimization.
+- **Multi-Agent Orchestration**: Native support for handing off tasks between agents.
+- **Stateful Sessions**: Conversations persist automatically.
+
 
 ---
 

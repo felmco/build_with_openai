@@ -22,7 +22,7 @@ def main():
 
     # Make the API call
     response = client.chat.completions.create(
-        model="gpt-3.5-turbo",  # The model to use
+        model="gpt-5-mini",  # The model to use
         messages=[
             {"role": "user", "content": "Hello! Can you introduce yourself in one sentence?"}
         ]

@@ -115,34 +115,37 @@ Let's break down what's happening:
 
 OpenAI provides several models, each optimized for different use cases:
 
-#### GPT-4 Family (Most Capable)
+#### GPT-5 Family (Flagship)
 
 | Model | Best For | Speed | Cost |
 |-------|----------|-------|------|
-| `gpt-4-turbo` | Complex tasks, reasoning | Medium | High |
-| `gpt-4` | Highest quality outputs | Slow | Highest |
-| `gpt-4-32k` | Long context (32k tokens) | Slow | Highest |
+| `gpt-5.2` | Complex tasks, reasoning, multimodal | Medium | High |
+| `gpt-5-mini` | General purpose, chat, most tasks | Fast | Low |
+| `gpt-5-nano` | Simple tasks, high throughput | Very Fast | Lowest |
 
-#### GPT-3.5 Family (Balanced)
+#### Reasoning Models (o1 Family)
 
 | Model | Best For | Speed | Cost |
 |-------|----------|-------|------|
-| `gpt-3.5-turbo` | General purpose, chat | Fast | Low |
-| `gpt-3.5-turbo-16k` | Longer conversations | Fast | Low |
+| `o1` | Deep reasoning, STEM, coding, complex planning | Slow | Highest |
+| `o1-mini` | Reasoning tasks requiring speed | Medium | Medium |
 
 #### When to Use Which Model?
 
-**Use GPT-4 when**:
-- You need highest quality output
-- Task requires complex reasoning
-- Accuracy is critical
-- Working with nuanced or complex instructions
+**Use GPT-5.2 when**:
+- You need highest quality output and creativity
+- Task requires complex instructions or nuance
+- Multimodal inputs (image + text)
 
-**Use GPT-3.5-turbo when**:
-- Building a chatbot or conversational interface
-- Need fast responses
-- Cost optimization is important
-- Task is straightforward
+**Use GPT-5 mini when**:
+- Building a standard chatbot
+- Need fast responses at low cost
+- Task is straightforward (summarization, extraction)
+
+**Use o1 when**:
+- Solving complex math or logic problems
+- Writing complex code or architecture
+- Task requires "thinking" before answering
 
 ### Model Comparison Example
 
@@ -187,7 +190,7 @@ def main():
     print("Comparing model responses...")
 
     # Test different models
-    models = ["gpt-3.5-turbo", "gpt-4"]
+    models = ["gpt-5-mini", "gpt-5.2", "o1"]
 
     for model in models:
         test_model(model, prompt)
@@ -254,6 +257,24 @@ Alternative to temperature (nucleus sampling).
 
 ```python
 top_p=0.9
+```
+
+#### 6. **reasoning_effort** (optional, o1 models only)
+Controls how much "thinking" the model does.
+- `low`, `medium`, `high`
+
+```python
+reasoning_effort="medium"
+```
+
+#### 7. **verbosity** (optional)
+Controls the length and detail of the output.
+- `low`: Concise
+- `medium`: Standard
+- `high`: Detailed/Verbose
+
+```python
+verbosity="low"
 ```
 
 ### Parameter Examples
@@ -351,6 +372,34 @@ def main():
     demonstrate_temperature()
     demonstrate_system_message()
     demonstrate_multiple_completions()
+    demonstrate_new_parameters()
+
+def demonstrate_new_parameters():
+    """Show reasoning_effort and verbosity"""
+    print("\n" + "="*60)
+    print("NEW PARAMETERS")
+    print("="*60)
+    
+    # Verbosity
+    print("\nVerbosity: high")
+    response_v = client.chat.completions.create(
+        model="gpt-5-mini",
+        messages=[{"role": "user", "content": "Explain quantum computing."}],
+        verbosity="high"
+    )
+    print(response_v.choices[0].message.content[:100] + "...")
+
+    # Reasoning Effort (o1 only)
+    print("\nReasoning Effort: medium")
+    try:
+        response_r = client.chat.completions.create(
+            model="o1",
+            messages=[{"role": "user", "content": "Solve this complex logic puzzle..."}],
+            reasoning_effort="medium"
+        )
+        print("Response received.")
+    except Exception as e:
+        print(f"Error (expected if no o1 access): {e}")
 
 if __name__ == "__main__":
     main()
