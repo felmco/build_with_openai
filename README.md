@@ -115,69 +115,54 @@ Explore the full range of OpenAI platform capabilities including responses, webh
 
 ---
 
-### [Module 7: Specialized Features](./module-06-specialized-features/README.md)
+### [Module 7: Specialized Features](./module-07-specialized-features/README.md)
 **Duration**: 5 hours | **Level**: Intermediate to Advanced
 
-Master advanced features including vector stores, real-time APIs, assistants, and chat completions.
+Master advanced performance features including Streaming, RAG with Vector Stores, and Realtime Audio.
 
 **Topics Covered**:
-- Vector Stores for semantic search
-- Realtime API with WebSockets
-- Assistants API (building persistent agents)
-- Chat Completions (advanced patterns)
-- Streaming implementations
-- Conversation state management
+- Streaming Responses for low latency
+- RAG (Retrieval Augmented Generation)
+- Vector Stores & Embeddings
+- Realtime API (WebSockets)
 
 ---
 
-### [Module 7: Advanced Topics](./module-07-advanced-topics/README.md)
+### [Module 8: Advanced Topics](./module-08-advanced-topics/README.md)
 **Duration**: 6 hours | **Level**: Advanced
 
-Advanced techniques for prompting, reasoning, evaluation, and optimization. Build sophisticated AI agents and implement complex workflows.
+Deep dive into reasoning models, scientific evaluation, and prompt optimization.
 
 **Topics Covered**:
-- Advanced prompting techniques
-- Reasoning models (o-series)
-- Evaluation frameworks and evals
-- Prompt optimization
-- Building agentic applications
-- Tool use and computer control
-- Background mode and async operations
-- File inputs (PDFs, documents)
+- Reasoning Models (o1, o1-mini)
+- Advanced Prompting (CoT, Few-Shot)
+- Evaluation Frameworks (Evals)
+- Prompt Engineering at Scale
 
 ---
 
-### [Module 8: Production Deployment](./module-08-production/README.md)
+### [Module 9: Production Deployment](./module-09-production-deployment/README.md)
 **Duration**: 4 hours | **Level**: Advanced
 
-Production-ready deployment strategies, optimization techniques, and enterprise-level considerations.
+Essential "Day 2" operations: Security, Observability, and Cost Management.
 
 **Topics Covered**:
-- Production best practices
-- Latency optimization
-- Cost optimization strategies
-- Accuracy improvement techniques
-- Safety and security considerations
-- Monitoring and logging
-- Scaling strategies
-- Enterprise features (RBAC, audit logs)
+- Security & Prompt Injection
+- Monitoring & Logging
+- Cost Optimization Patterns
+- Rate Limits & Reliability
 
 ---
 
-### [Module 9: Practical Projects](./module-09-projects/README.md)
+### [Module 10: Practical Projects](./projects/README.md)
 **Duration**: 8+ hours | **Level**: All Levels
 
 Hands-on projects to apply your knowledge and build real-world applications.
 
 **Projects Include**:
-- 🤖 Intelligent Chatbot with Memory
-- 📄 Document Analysis System
-- 🎨 AI Image Generator Application
-- 🎙️ Voice Assistant with Speech Recognition
-- 🔍 Semantic Search Engine
-- 🛠️ AI Agent with Tool Use
-- 📊 Data Analysis Assistant
-- 💼 Enterprise AI Dashboard
+- 🕵️ **Auto Researcher**: Agentic workflow with `o1`
+- 👁️ **Vision Sales Assistant**: Multimodal analysis with `gpt-4o`
+- 🎙️ **Voice Commander**: Speech-to-action with Whisper/TTS
 
 ---
 
